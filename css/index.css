@@ -15,98 +15,90 @@ body {
 
 header{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  align-content: space-between;
+  justify-content: space-evenly;
 }
-.navbar{
-  display:flex;
-  background-color: black;
-  flex-direction: row;
-}
-.navbar div{
-  display: flex;
-  flex-direction: row;
-  color:white;
-  margin: 5px;
-  width: 100px;
-  align-self: center;
-  text-align: center;
+
+nav{
+  text-align: left;
+  background-color: grey;
+  margin-left: 10px;
 }
 
 main{
   display: flex;
-  flex-direction: row;
-  align-content: space-between;
-}
-
-main section{
-  display: flex;
   flex-direction: column;
-  margin: 40px;
-  width: 500px;
-  height: 500px;
-  background-color: azure;
+  padding: 5px;
 }
 
 ul{
+  list-style: none;
+  margin-left: 10px;
+}
+
+.menu{
+  display: none;
+}
+
+li{
+  display: inline;
+  margin-left: 10px;
+}
+
+.hamburger{
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+}
+
+.product{
+  border: solid;
+  text-align: center;
+  border-color: grey;
+  border-width: 1px;
+}
+.social{
   display: flex;
   flex-direction: row;
-  align-content: space-between;
-}
-ul li{
-  display: inline;
-  width: 3500px;
-  margin:50px;
+  justify-content: space-around;
 }
 
+@media (min-width: 768px) and (max-width : 1024px){
+ header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+}
 
-
-@media (min-width: 450px) and (max-width : 999px){
+@media (min-width: 1025px){
   header{
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
-    align-content: space-between;
+  }
+  .menu{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: flex-end;
   }
   .navbar{
-    display:flex;
-    background-color: black;
-    flex-direction: row;
+    justify-content: flex-end;
+    padding: 5px;
   }
-  .navbar div{
-    display: flex;
-    flex-direction: row;
-    color:white;
-    margin: 5px;
-    width: 50px;
-    align-self: center;
-    text-align: center;
+  .hamburger{
+    display: none;
   }
-  
   main{
     display: flex;
-    flex-direction: column;
-    align-content: space-between;
-  }
-  
-  main section{
-    display: flex;
-    flex-direction: column;
-    margin: 40px;
-    width: 500px;
-    height: 500px;
-    background-color: azure;
-  }
-  
-  ul{
-    display: flex;
     flex-direction: row;
-    align-content: space-between;
+    justify-content: space-evenly;
   }
-  ul li{
-    display: inline;
-    width: 3500px;
-    margin:50px;
+  .product{
+    width:40%;
   }
-}
+ }
